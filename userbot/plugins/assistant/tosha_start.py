@@ -65,13 +65,13 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.inline(
-                                          "⚜️ 𝙄𝘾𝙎𝙎 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="Icss")]
+                                          "⚜️ 𝙏𝙀𝙇𝙀𝙏𝙃𝙊𝙉 𝘼𝙍𝘼𝘽𝙎 ⁦⚜️", data="Icss")]
                                   ])
         else:
             await event.reply(startotherena,
                                      buttons=[
                                          [Button.inline(
-                                             "⚜️ 𝙄𝘾𝙎𝙎 - 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 ⁦⚜️", data="icss")]
+                                             "⚜️ 𝙏𝙀𝙇𝙀𝙏𝙃𝙊𝙉 𝘼𝙍𝘼𝘽𝙎 ⁦⚜️", data="icss")]
                                      ])
 
 
@@ -99,7 +99,7 @@ async def logs(event):
         Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
         app = Heroku.app(Config.HEROKU_APP_NAME)
     except BaseException:
-        await tgbot.send_message(event.chat_id, " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var !")
+        await tgbot.send_message(event.chat_id, "-وضع  !")
         return
     with open('logs.txt', 'w') as log:
         log.write(app.get_log())
@@ -111,7 +111,7 @@ async def logs(event):
         event.chat_id,
         "logs.txt",
         reply_to=event.id,
-        caption="**Heroku** Icss Logs",
+        caption="**Heroku** telethone Logs",
         buttons=[
             [Button.url("💠 𝙑𝙄𝙀𝙒 𝙊𝙉𝙇𝙄𝙉𝙀 💠", f"{url}")],
             [Button.url("💠 𝘾𝙍𝘼𝙎𝙃𝙀𝘿 💠", "t.me/rruuurr")]
@@ -129,7 +129,7 @@ async def settings(event):
                              "⌔∮ ليس هناك الكثير للقيام به هنا.",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ احصل على بوت اكسس بنفسك ⚜️", data="deployme")]
+                                         "⚜️ احصل على بوت بنفسك ⚜️", data="deployme")]
                              ])
 
 
@@ -140,7 +140,7 @@ async def settings(event):
     await event.reply(f"⌔∮ انا اكسس مساعد {mention}. الشخصي تستطيع الاتصال بي عن طريق هذا البوت",
                              buttons=[
                                      [Button.inline(
-                                         "⚜️ حصل على بوت اكسس بنفسك ⚜️", data="deployme")]
+                                         "⚜️ حصل على بوت بنفسك ⚜️", data="deployme")]
                              ])
 
 
@@ -149,8 +149,8 @@ async def settings(event):
 async def settings(event):
     await event.edit("** ⌔∮ هنا ستجد رابط اكسس ورابط التنصيب ايضا**:",
                      buttons=[
-                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/ANL0KE/ICSS-USERBOT")],
-                         [Button.url("🔗 رابط التنصيب 🔗", url="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FANL0KE%2FICSSBACK")],
+                         [Button.url("🔗 رابط السورس🔗", url="https://github.com/KIMO-TE/ICSS-USERBOT")],
+                         [Button.url("🔗 رابط التنصيب 🔗", url="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FANL0KE%2Fpack")],
                          [Button.url("✨ الدعم ✨",
                                      url="https://t.me/rruuurr")]
                      ])
@@ -170,7 +170,7 @@ async def settings(event):
                                          "⚜️ لتغير الايڤ وغيرها ⚜️ ⁦⁩", data="custom")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 # icss zag - زغرفه اكسس
@@ -192,7 +192,7 @@ async def settings(event):
                                      "اسماء القنوات 🍇", data="chanlan")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -213,7 +213,7 @@ async def settings(event):
                                          "اسماء بنات 🍇", data="girlan")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 # Boys zag - زغرفه اسماء الشباب
@@ -233,7 +233,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icsname")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -283,7 +283,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icsname")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -333,7 +333,7 @@ async def settings(event):
                                          "⫷ التالي ", data="icspio2")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -354,7 +354,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio3")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -375,7 +375,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio4")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -396,7 +396,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio5")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 
@@ -417,7 +417,7 @@ async def settings(event):
                                          "⫷ التالي", data="icspio1")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 # Boys zag - زغرفه اسماء الشباب
@@ -437,7 +437,7 @@ async def settings(event):
                                          "║ رجوع ║", data="icszag")]
                                  ])
     else:
-        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @rruuurr", alert=True)
+        await event.answer("انت لا تستطيع استخدام البوت احصل على بوتك من @IQTHON", alert=True)
 
 
 # Months - الاشهر
