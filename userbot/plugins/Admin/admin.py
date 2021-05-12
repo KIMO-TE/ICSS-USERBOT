@@ -86,7 +86,7 @@ async def set_group_photo(gpic):
     if not gpic.is_group:
         await eor(
             gpic,
-            "** ⪼ لا اعتقد ان ۿذه مجمـوعه 𓆰،**\n ⫷ [𝙎𝙊𝙐𝙍𝘾𝞝  𝙞𝘾𝙎𝙎 ](t.me/rruuurr) ⫸",
+            "** ⪼ لا اعتقد ان ۿذه مجمـوعه 𓆰،**",
         )
         return
     replymsg = await gpic.get_reply_message()
