@@ -16,9 +16,8 @@ from . import ALIVE_NAME, StartTime, get_readable_time, icsv, mention
 from . import reply_id as rd
 
 DEFAULTUSER = ALIVE_NAME or "ICSS"
-ICSS_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/499596b18292c0e43ac56.jpg"
-ICSS_TEXT = Config.CUSTOM_ALIVE_TEXT or "𓆩 𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑻𝑶 𝑺𝑶𝑼𝑹𝑪𝑬 𝑰𝑪𝑺𝑺 𓆪"
-ICSEM = Config.CUSTOM_ALIVE_EMOJI or "  ⌔∮ "
+ICSS_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/fab43e60e6256874e1849.jpg"
+ICSS_TEXT = Config.CUSTOM_ALIVE_TEXT or "⇝ ＴＥＬＥＴＨＯＮ ＡＲＡＢＳ ⇜"
 
 
 @icssbot.on(admin_cmd(outgoing=True, pattern="السورس$"))
@@ -31,30 +30,15 @@ async def ica(icss):
     _, check_sgnirts = check_data_base_heal_th()
     if ICSS_IMG:
         ics_c = f"**{ICSS_TEXT}**\n"
-        ics_c += f"𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻 \n"
-        ics_c += f"**{ICSEM} قاعدة البيانات ↫** `{check_sgnirts}`\n"
-        ics_c += f"**{ICSEM} اصدار التليثون  ↫** `{version.__version__}\n`"
-        ics_c += f"**{ICSEM} اصدار اڪسس ↫** `{icsv}`\n"
-        ics_c += f"**{ICSEM} اصدار البايثون ↫** `{python_version()}\n`"
-        #        ics_c += f"**{ICSEM} مدة التشغيل ↫** `{icsupt}\n`"
-        ics_c += f"**{ICSEM} المستخدم ↫** {mention}\n"
-        ics_c += f"**{ICSEM} مطور السورس ↫** [اضغط هنا](t.me/rruuurr) 𓆰.\n"
-        ics_c += f"𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n"
+        ics_c += f"**┓قاعدة البيانات -** {check_sgnirts} 𓄂\n"
+        ics_c += f"**┫اصدار التليثون -** {version.__version__} 𓄂\n"
+        ics_c += f"**┫اصدار السورس -** {icsv} 𓄂\n"
+        ics_c += f"**┫اصدار البايثون -** {python_version()} 𓄂\n"
+        ics_c += f"**┛مطور السورس -** [اضغط هنا](t.me/rruuurr) 𓄂\n"
         await icss.client.send_file(
             icss.chat_id, ICSS_IMG, caption=ics_c, reply_to=ics_id
         )
         await icss.delete()
-    else:
-        await eor(
-            icss,
-            f"**{ICSS_TEXT}**\n\n"
-            f"**{ICSEM} قاعدة البيانات ↫**  `{check_sgnirts}`\n"
-            f"**{ICSEM} اصدار التليثون  ↫** `{version.__version__}\n`"
-            f"**{ICSEM} اصدار اڪسس ↫** `{icsv}`\n"
-            f"**{ICSEM} اصدار البايثون  ↫** `{python_version()}\n`"
-            f"**{ICSEM} مدة التشغيل ↫** `{icsupt}\n`"
-            f"**{ICSEM} المستخدم ↫** {mention}\n",
-        )
 
 
 def check_data_base_heal_th():
